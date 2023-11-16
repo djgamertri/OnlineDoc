@@ -1,10 +1,11 @@
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
+import Overview from './views/Overview'
 
 function App () {
   return (
     <Routes>
-      <Route path='/' element={<h1>Hola</h1>} />
+      <Route path='/dashboard' element={<Overview />} />
     </Routes>
   )
 }

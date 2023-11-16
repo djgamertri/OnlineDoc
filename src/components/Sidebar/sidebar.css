@@ -1,0 +1,58 @@
+.Navegation{
+    width: 240px;
+    height: 100vh;
+    padding: 24px 16px;
+    background-color: #1c2536;
+    color: #ffff;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    position: fixed;
+    top: 0;
+}
+.Logo{
+    padding: 30px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid #9da4ae;
+}
+.Logo i{
+    font-size: 2rem;
+}
+nav ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    gap: 12px;
+}
+nav ul li{
+    cursor: pointer;
+}
+nav ul li a{
+    text-decoration: none;
+    display: flex;
+    padding: 6px 16px;
+    color: #9da4ae;
+    align-items: flex-end; 
+    gap: 12px;
+    border-radius: 8px;
+}
+nav ul li a i{
+    font-size: 1.5rem;
+}
+nav ul li a:hover{
+    background-color: #ffffff0a;
+}
+.active{
+    background-color: #ffffff0a;
+}
+.active{
+    color: #ffff;
+}
+.active i{
+    color: #6366f1;;
+}

@@ -1,0 +1,10 @@
+.main{
+    left: 282px;
+    width: calc(100% - 295px);
+    position: sticky;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.content{
+    padding: 30px;
+}

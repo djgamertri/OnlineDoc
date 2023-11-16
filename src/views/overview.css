@@ -1,0 +1,15 @@
+.tables{
+    border: 1px solid #d3d2d2;
+    border-radius: 8px;
+    padding: 20px;
+}
+.graph{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 400px;
+    margin-bottom: 50px;
+}
+.graph hr{
+    height: 300px;
+}
