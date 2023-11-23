@@ -57,10 +57,11 @@
     text-align: center;
 }
 .form-input{
-    padding: 10px 5px;
-    outline: none;
-    border: 1px solid #9da4ae;
-    border-radius: 8px;
+    background-color: #eaeaea;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: .8rem 1.5rem;
 }
 .notStatick .MainLayout-stickyElement{
     position: relative;

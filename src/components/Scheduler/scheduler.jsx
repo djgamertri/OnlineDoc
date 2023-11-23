@@ -13,12 +13,8 @@ import {
 } from '@devexpress/dx-react-scheduler-material-ui'
 
 const currentDate = new Date().toDateString()
-const schedulerData = [
-  { startDate: '2018-11-01T09:45', endDate: '2018-11-01T11:00', title: 'Meeting' },
-  { startDate: '2023-11-18T15:46', endDate: '2023-11-18T19:46', title: 'Go to a gym' }
-]
 
-function scheduler () {
+function scheduler ({ schedulerData }) {
   return (
     <Scheduler
       data={schedulerData}
@@ -27,13 +23,13 @@ function scheduler () {
         currentDate={currentDate}
       />
       <WeekView
-        startDayHour={9}
-        endDayHour={19}
+        startDayHour={0}
+        endDayHour={24}
       />
       <MonthView />
       <DayView
-        startDayHour={9}
-        endDayHour={19}
+        startDayHour={0}
+        endDayHour={24}
       />
       <Toolbar />
       <DateNavigator />

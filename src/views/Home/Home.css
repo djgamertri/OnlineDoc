@@ -1,0 +1,19 @@
+.Navbar{
+    display: flex;
+    padding: 20px 30px;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 20px 0 rgba(144,174,205,.339);
+}
+header{
+    position: fixed;
+    width: 100%;
+}
+.Navbar ul{
+    display: flex;
+    flex-direction: row;
+}
+.Navbar ul a{
+    text-decoration: none;
+    font-size: 1rem;
+}
