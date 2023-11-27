@@ -17,3 +17,175 @@ header{
     text-decoration: none;
     font-size: 1rem;
 }
+.container-index {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    width: 80%;
+    margin: 2rem auto;
+}
+
+/* Hero */
+
+.hero {
+    display: flex;
+    height: 90vh;
+    width: 80%;
+    margin: 0 auto;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+}
+
+.hero-img {
+    flex: 1;
+}
+
+.hero-img img {
+    width: 100%;
+}
+
+/* About */
+
+.about {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 770px) {
+.hero {
+    height: auto;
+}
+.hero,
+.about {
+    flex-direction: column;
+}
+.hero-content {
+    margin-top: 2rem;
+    align-items: center;
+}
+.hero-content h1 {
+    text-align: center;
+}
+.about-heading {
+    margin-top: 4rem;
+}
+}
+
+/* Footer */
+
+footer {
+    background-color: rgba(30,55,90,.7);
+}
+
+.footer {
+    display: flex;
+    width: 50%;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 100%;
+    margin: auto;
+    padding: 2rem 0;
+}
+
+.footer h3 {
+    color: #e9f1fa;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer a {
+    color: #e9f1fa;
+}
+
+.footer-links ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 0;
+}
+
+.footer li {
+    list-style: none;
+}
+
+.social ul {
+    display: flex;
+    gap: 1rem;
+}
+
+.social li {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social svg {
+    font-size: 1.3rem;
+}
+
+.facebook {
+    background-color: #3b5998;
+}
+
+.instagram {
+    background: linear-gradient(
+        180deg,
+        rgba(64, 93, 230, 1) 0%,
+        rgba(131, 58, 180, 1) 25%,
+        rgba(225, 48, 108, 1) 50%,
+        rgba(245, 96, 64, 1) 75%,
+        rgba(252, 175, 69, 1) 100%
+    );
+}
+
+.youtube {
+    background-color: #ff0000;
+}
+
+.footer-bottom {
+    text-align: center;
+    background-color: #1e375a;
+    color: #e9f1fa;
+    padding: 0.3rem 0;
+}
+
+.footer-bottom a {
+    color: #00abe4;
+}
+
+@media screen and (max-width: 550px) {
+.social ul {
+    flex-direction: column;
+    align-items: center;
+}
+}
