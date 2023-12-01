@@ -65,9 +65,7 @@ function MyBook () {
         <h1>Agenda</h1>
       </div>
       <div className='tables'>
-
         <DataTable columns={columns} data={Data} customStyles={customStyles} pagination paginationPerPage={5} paginationRowsPerPageOptions={[5, 10, 15, 20]} paginationComponentOptions={paginationOptions} />
-
       </div>
       {RegisterOpen && <Modal CloseModal={toggleRegister}><UpdateAppoimentUser CloseModal={toggleRegister} id={IdUser} /></Modal>}
 
