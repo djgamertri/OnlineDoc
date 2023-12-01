@@ -3,6 +3,7 @@ import { register as registerFetch } from '../../api/auth.js'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import Modal from '../../layouts/Modal.jsx'
+import { toast } from 'sonner'
 
 function CreateDoctor ({ CloseModal }) {
   const { register, handleSubmit, formState: { errors } } = useForm()
@@ -14,9 +15,11 @@ function CreateDoctor ({ CloseModal }) {
       if (res.data) {
         CloseModal(true)
       }
+      toast.success('Successfully registered doctor')
     } catch (err) {
       console.error(err.response.data)
       setMessage(err.response.data.message)
+      toast.error(err.response.data.message)
     }
   }
 

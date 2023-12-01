@@ -1,14 +1,14 @@
 import React, { useContext, useEffect, useState } from 'react'
 import Dashboard from '../../layouts/dashboard'
 import DataTable from 'react-data-table-component'
-import { customStyles, paginationOptions } from '../../components/Tables/Config'
-import { GetOneBookPatient } from '../../api/book'
+import { GetOneByDoctor } from '../../api/book'
 import { UserContext } from '../../Context/UserContext'
-import { useModal } from '../../Hooks/useModal'
+import { customStyles, paginationOptions } from '../../components/Tables/Config'
 import Modal from '../../layouts/Modal'
-import UpdateAppoimentUser from '../../Form/UpdateAppoimentUser'
+import { useModal } from '../../Hooks/useModal'
+import UpdateAppoiment from '../../Form/UpdateAppoiment'
 
-function MyBook () {
+function Agenda () {
   const [Data, setData] = useState([])
   const [IdUser, setIdUser] = useState(null)
   const { Open: RegisterOpen, ToggleState: toggleRegister } = useModal()
@@ -16,7 +16,7 @@ function MyBook () {
   const { User } = useContext(UserContext)
 
   useEffect(() => {
-    GetOneBookPatient(User._id)
+    GetOneByDoctor(User._id)
       .then(response => {
         setData(response.data)
         console.log(response.data)
@@ -28,8 +28,8 @@ function MyBook () {
 
   const columns = [
     {
-      name: 'Doctor',
-      selector: row => row.doctor.name
+      name: 'Patient',
+      selector: row => row.patient.name
     },
     {
       name: 'Date Start',
@@ -53,6 +53,7 @@ function MyBook () {
       )
     }
   ]
+
   const handleEdit = (e, id) => {
     console.log(id)
     setIdUser(id)
@@ -63,16 +64,18 @@ function MyBook () {
     <Dashboard>
       <div className='header'>
         <h1>Agenda</h1>
+        <a className='Button' onClick={() => toggleRegister()}>Add</a>
       </div>
+
       <div className='tables'>
 
         <DataTable columns={columns} data={Data} customStyles={customStyles} pagination paginationPerPage={5} paginationRowsPerPageOptions={[5, 10, 15, 20]} paginationComponentOptions={paginationOptions} />
 
       </div>
-      {RegisterOpen && <Modal CloseModal={toggleRegister}><UpdateAppoimentUser CloseModal={toggleRegister} id={IdUser} /></Modal>}
+      {RegisterOpen && <Modal CloseModal={toggleRegister}><UpdateAppoiment CloseModal={toggleRegister} id={IdUser} /></Modal>}
 
     </Dashboard>
   )
 }
 
-export default MyBook
+export default Agenda

@@ -57,7 +57,7 @@ function Overview () {
   ]
 
   const chartData = {
-    labels: ['Pending Appointments', 'Canceled Appointments', 'Canceled Appointments'],
+    labels: ['Pending Appointments', 'Completed Appointments', 'Canceled Appointments'],
     datasets: [
       {
         data: [Counters.appointmentsInProgress, Counters.completedAppointments, Counters.canceledAppointments],

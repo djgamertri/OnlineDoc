@@ -15,12 +15,14 @@
     "@devexpress/dx-react-scheduler-material-ui": "^4.0.6",
     "axios": "^1.6.2",
     "chart.js": "^4.4.0",
+    "date-fns": "^2.30.0",
     "react": "^18.2.0",
     "react-chartjs-2": "^5.2.0",
     "react-data-table-component": "^7.5.4",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.48.2",
-    "react-router-dom": "^6.18.0"
+    "react-router-dom": "^6.18.0",
+    "sonner": "^1.2.4"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

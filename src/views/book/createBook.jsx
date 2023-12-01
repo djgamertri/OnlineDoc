@@ -5,6 +5,7 @@ import { UserContext } from '../../Context/UserContext'
 import { GetAllService } from '../../api/service'
 import { GetDoctors } from '../../api/user'
 import { RegisterAppoiment } from '../../api/book'
+import { toast } from 'sonner'
 
 function createBook ({ CloseModal }) {
   const { register, handleSubmit, formState: { errors } } = useForm()
@@ -17,8 +18,10 @@ function createBook ({ CloseModal }) {
         CloseModal(true)
       }
       console.log(res)
+      toast.success('Successfully registered appointment')
     } catch (err) {
-      console.error(err.response.data)
+      console.error(err.response.data.message)
+      toast.error(err.response.data.message)
     }
   }
 
@@ -49,6 +52,14 @@ function createBook ({ CloseModal }) {
       })
   }, [User._id]) // Agregué User._id como dependencia del efecto
 
+  const validateDate = (value) => {
+    const currentDateTime = new Date().toISOString().slice(0, 16)
+    if (value < currentDateTime) {
+      return 'Fecha no valida'
+    }
+    return true
+  }
+
   return (
     <Modal CloseModal={CloseModal}>
       <form className='form-disposition' onSubmit={sendData}>
@@ -60,7 +71,7 @@ function createBook ({ CloseModal }) {
         <input className='form-input' readOnly hidden placeholder='Nombre' type='text' value={User._id} {...register('patient', { required: 'Patient required' })} />
         {errors.patient && <p>{errors.patient.message}</p>}
 
-        <input className='form-input' type='datetime-local' min={new Date().toISOString().split('T')[0]} {...register('dateStart', { required: 'Date required' })} />
+        <input className='form-input' type='datetime-local' {...register('dateStart', { required: 'Date required', validate: validateDate })} />
         {errors.dateStart && <p>{errors.dateStart.message}</p>}
 
         <select className='form-input' {...register('doctor', { required: 'Doctor required' })}>

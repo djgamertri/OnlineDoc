@@ -22,11 +22,15 @@ function SideBar () {
           }
           <li><NavLink to='/book'><i className='bx bxs-book-add' /> Book </NavLink></li>
           <li><NavLink to='/My-Book'><i className='bx bxs-book' /> My Book </NavLink></li>
+
           {
             User.role !== 'Doctor'
               ? null
               : (
-                <li><NavLink to='/doctor'><i className='bx bxs-user' /> Doctors </NavLink></li>
+                <>
+                  <li><NavLink to='/doctor'><i className='bx bxs-user' /> Doctors </NavLink></li>
+                  <li><NavLink to='/Agenda'><i className='bx bxs-book-bookmark' /> Agenda </NavLink></li>
+                </>
                 )
           }
           {

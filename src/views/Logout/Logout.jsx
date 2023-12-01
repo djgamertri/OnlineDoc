@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from 'react'
 import { UserContext } from '../../Context/UserContext'
 import { useNavigate } from 'react-router-dom'
+import { toast } from 'sonner'
 
 function Logout () {
   const { Logout, User } = useContext(UserContext)
@@ -10,6 +11,7 @@ function Logout () {
     console.log('Cerrando session')
     Logout()
     navigate('/')
+    toast.success('Logout succes')
   }, [User])
 
   return (

@@ -4,6 +4,7 @@ import { login } from '../../api/auth.js'
 import { Link, useNavigate } from 'react-router-dom'
 import { useContext, useEffect, useState } from 'react'
 import { UserContext } from '../../Context/UserContext.jsx'
+import { toast } from 'sonner'
 
 function Login () {
   const { register, handleSubmit } = useForm()
@@ -16,10 +17,12 @@ function Login () {
     try {
       const res = await login(user)
       addUser(res.data.data)
+      toast.success('Successful entry')
       navigate('/')
     } catch (err) {
       console.error(err.response.data)
       setMessage(err.response.data.message)
+      toast.error(err.response.data.message)
     }
   }
 

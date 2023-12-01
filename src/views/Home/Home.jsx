@@ -49,9 +49,7 @@ function Home () {
             Our Responsibility
           </h1>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-            tenetur doloremque molestias repellat minus asperiores in aperiam
-            dolor, quaerat praesentium.
+            Doctors, the unsung heroes of humanity, bravely navigate the realms of illness, stitching hope into the fabric of despair and healing with the gentle touch of compassion.
           </p>
         </div>
         <div className='hero-img'>
@@ -72,13 +70,7 @@ function Home () {
           <div className='hero-content'>
             <h1>AboutUs</h1>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Quibusdam tenetur doloremque molestias repellat minus asperiores
-              in aperiam dolor, quaerat praesentium. Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Voluptatibus, repudiandae! Lorem
-              ipsum dolor sit amet consectetur adipisicing elit. Provident
-              quibusdam doloremque ex? Officia atque ab dolore? Tempore totam
-              non ea!
+              Welcome to OnlineDoc, where compassionate care meets cutting-edge expertise in the realm of medical services. Established with a commitment to enhancing lives through health and wellness, we take pride in being your trusted partner on the journey to optimal well-being.
             </p>
           </div>
         </div>
@@ -86,51 +78,13 @@ function Home () {
       <footer>
         <div className='footer'>
           <div className='footer-links'>
-            <h3>Links</h3>
+            <h3>Support</h3>
             <ul>
               <li>
-                <a>Home</a>
+                <a>OnlineDoc@gmail.com</a>
               </li>
               <li>
-                <a>Doctors</a>
-              </li>
-              <li>
-                <a>Appointments</a>
-              </li>
-              <li>
-                <a>Notifications</a>
-              </li>
-              <li>
-                <a>Contact Us</a>
-              </li>
-              <li>
-                <a>Profile</a>
-              </li>
-            </ul>
-          </div>
-          <div className='social'>
-            <h3>Social links</h3>
-            <ul>
-              <li className='facebook'>
-                <li
-                  href='https://www.facebook.com/'
-                  target='_blank'
-                  rel='noreferrer'
-                />
-              </li>
-              <li className='youtube'>
-                <a
-                  href='https://www.youtube.com/'
-                  target='_blank'
-                  rel='noreferrer'
-                />
-              </li>
-              <li className='instagram'>
-                <a
-                  href='https://www.instagram.com/'
-                  target='_blank'
-                  rel='noreferrer'
-                />
+                <a>+1232131312</a>
               </li>
             </ul>
           </div>
